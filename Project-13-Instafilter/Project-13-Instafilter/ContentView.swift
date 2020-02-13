@@ -14,9 +14,11 @@ import SwiftUI
 struct ContentView: View {
     @State private var image: Image?
     @State private var filterIntensity = 0.5
+    @State private var filterRadius = 0.5
     
     @State private var showingFilterSheet = false
     @State private var showingImagePicker = false
+    @State private var showingAlertForNoneImage = false
     @State private var inputImage: UIImage?
     @State private var processedImage: UIImage?
     
@@ -32,6 +34,12 @@ struct ContentView: View {
                 self.filterIntensity = $0
                 self.applyProcessing()
             }
+        )
+        
+        let radius = Binding<Double> (
+            get: { self.filterRadius },
+            set: { self.filterRadius = $0
+                self.applyProcessing()}
         )
         
         return NavigationView {
@@ -54,9 +62,15 @@ struct ContentView: View {
                     self.showingImagePicker = true
                 }
                 
-                HStack {
-                    Text("Intensity")
-                    Slider(value: intensity)
+                VStack {
+                    HStack {
+                        Text("Intensity")
+                        Slider(value: intensity)
+                    }
+                    HStack {
+                        Text("Radius")
+                        Slider(value: radius)
+                    }
                 }
                 .padding(.vertical)
                 
@@ -65,10 +79,18 @@ struct ContentView: View {
                         self.showingFilterSheet = true
                     }
                     
+                    Text("\(currentFilter.name)")
+                        .font(.subheadline)
+                        .foregroundColor(.purple)
+                        .padding()
+                    
                     Spacer()
                     
                     Button("Save") {
-                        guard let processedImage = self.processedImage else { return }
+                        guard let processedImage = self.processedImage else {
+                            self.showingAlertForNoneImage = true
+                            return
+                        }
                         
                         let imageSaver = ImageSaver()
                         
@@ -101,6 +123,9 @@ struct ContentView: View {
                     .cancel()
                 ])
             }
+            .alert(isPresented: $showingAlertForNoneImage) {
+                Alert(title: Text("No picture to save"), message: Text("Please select one picture first"), dismissButton: .default(Text("OK")))
+            }
         }
     }
     
@@ -122,7 +147,7 @@ struct ContentView: View {
             currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey)
         }
         if inputKeys.contains(kCIInputRadiusKey) {
-            currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey)
+            currentFilter.setValue(filterRadius, forKey: kCIInputRadiusKey)
         }
         if inputKeys.contains(kCIInputScaleKey) {
             currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey)
