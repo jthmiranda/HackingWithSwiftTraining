@@ -6,15 +6,43 @@
 //  Copyright © 2020 Jonathan Miranda. All rights reserved.
 //
 
-import MapKit
+import LocalAuthentication
 import SwiftUI
 
 
 struct ContentView: View {
+    @State private var isUnlock = false
    
     var body: some View {
-        MapView()
-            .edgesIgnoringSafeArea(.all)
+        VStack {
+            if self.isUnlock {
+                Text("Unlock")
+            } else {
+                Text("Locked")
+            }
+        }
+        .onAppear(perform: authenticate)
+    }
+    
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "We need to unlock your data."
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, autheticationError in
+                DispatchQueue.main.async {
+                    if success {
+                        self.isUnlock = true
+                    } else {
+                        // there was a problem
+                    }
+                }
+            }
+        } else {
+            // no biometrics
+        }
     }
     
 }
