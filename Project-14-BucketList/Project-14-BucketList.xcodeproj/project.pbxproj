@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3414217923F9E0B600DDE9EB /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3414217823F9E0B600DDE9EB /* MKPointAnnotation-ObservableObject.swift */; };
+		3414217B23F9E24900DDE9EB /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3414217A23F9E24900DDE9EB /* EditView.swift */; };
+		346EF4F723FB17EC0022A34C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346EF4F623FB17EC0022A34C /* Result.swift */; };
 		34713DAE23F8BBCB00DF5FC6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34713DAD23F8BBCB00DF5FC6 /* MapView.swift */; };
 		34739E4B23F791020029846E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34739E4A23F791020029846E /* AppDelegate.swift */; };
 		34739E4D23F791020029846E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34739E4C23F791020029846E /* SceneDelegate.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3414217823F9E0B600DDE9EB /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
+		3414217A23F9E24900DDE9EB /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		346EF4F623FB17EC0022A34C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		34713DAD23F8BBCB00DF5FC6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		34739E4723F791020029846E /* Project-14-BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-14-BucketList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34739E4A23F791020029846E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +68,9 @@
 				34739E4C23F791020029846E /* SceneDelegate.swift */,
 				34739E4E23F791020029846E /* ContentView.swift */,
 				34713DAD23F8BBCB00DF5FC6 /* MapView.swift */,
+				3414217823F9E0B600DDE9EB /* MKPointAnnotation-ObservableObject.swift */,
+				3414217A23F9E24900DDE9EB /* EditView.swift */,
+				346EF4F623FB17EC0022A34C /* Result.swift */,
 				34739E5023F791060029846E /* Assets.xcassets */,
 				34739E5523F791060029846E /* LaunchScreen.storyboard */,
 				34739E5823F791060029846E /* Info.plist */,
@@ -151,7 +160,10 @@
 			files = (
 				34739E4B23F791020029846E /* AppDelegate.swift in Sources */,
 				34713DAE23F8BBCB00DF5FC6 /* MapView.swift in Sources */,
+				3414217B23F9E24900DDE9EB /* EditView.swift in Sources */,
 				34739E4D23F791020029846E /* SceneDelegate.swift in Sources */,
+				346EF4F723FB17EC0022A34C /* Result.swift in Sources */,
+				3414217923F9E0B600DDE9EB /* MKPointAnnotation-ObservableObject.swift in Sources */,
 				34739E4F23F791020029846E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
