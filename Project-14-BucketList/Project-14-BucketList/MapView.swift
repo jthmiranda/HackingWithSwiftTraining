@@ -74,8 +74,8 @@ struct MapView: UIViewRepresentable {
 extension MKPointAnnotation {
     static var example: MKPointAnnotation {
         let annotation = MKPointAnnotation()
-        annotation.title = "Talnique"
-        annotation.subtitle = "Home sweet home"
+        annotation.title = "UK"
+        annotation.subtitle = "London"
         annotation.coordinate = CLLocationCoordinate2D(latitude: 84.0, longitude: 13.0)
         return annotation
     }

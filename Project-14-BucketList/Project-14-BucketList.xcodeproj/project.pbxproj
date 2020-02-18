@@ -11,6 +11,7 @@
 		3414217B23F9E24900DDE9EB /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3414217A23F9E24900DDE9EB /* EditView.swift */; };
 		346EF4F723FB17EC0022A34C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346EF4F623FB17EC0022A34C /* Result.swift */; };
 		346EF4F923FB22C50022A34C /* MKPointAnnotation-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346EF4F823FB22C50022A34C /* MKPointAnnotation-Codable.swift */; };
+		346EF4FB23FB4C750022A34C /* MapViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346EF4FA23FB4C750022A34C /* MapViewContent.swift */; };
 		34713DAE23F8BBCB00DF5FC6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34713DAD23F8BBCB00DF5FC6 /* MapView.swift */; };
 		34739E4B23F791020029846E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34739E4A23F791020029846E /* AppDelegate.swift */; };
 		34739E4D23F791020029846E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34739E4C23F791020029846E /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 		3414217A23F9E24900DDE9EB /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		346EF4F623FB17EC0022A34C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		346EF4F823FB22C50022A34C /* MKPointAnnotation-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Codable.swift"; sourceTree = "<group>"; };
+		346EF4FA23FB4C750022A34C /* MapViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewContent.swift; sourceTree = "<group>"; };
 		34713DAD23F8BBCB00DF5FC6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		34739E4723F791020029846E /* Project-14-BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-14-BucketList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34739E4A23F791020029846E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				34739E4A23F791020029846E /* AppDelegate.swift */,
 				34739E4C23F791020029846E /* SceneDelegate.swift */,
 				34739E4E23F791020029846E /* ContentView.swift */,
+				346EF4FA23FB4C750022A34C /* MapViewContent.swift */,
 				346EF4F823FB22C50022A34C /* MKPointAnnotation-Codable.swift */,
 				34713DAD23F8BBCB00DF5FC6 /* MapView.swift */,
 				3414217823F9E0B600DDE9EB /* MKPointAnnotation-ObservableObject.swift */,
@@ -168,6 +171,7 @@
 				346EF4F723FB17EC0022A34C /* Result.swift in Sources */,
 				3414217923F9E0B600DDE9EB /* MKPointAnnotation-ObservableObject.swift in Sources */,
 				346EF4F923FB22C50022A34C /* MKPointAnnotation-Codable.swift in Sources */,
+				346EF4FB23FB4C750022A34C /* MapViewContent.swift in Sources */,
 				34739E4F23F791020029846E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
