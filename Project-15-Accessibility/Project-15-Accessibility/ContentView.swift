@@ -25,14 +25,11 @@ struct ContentView: View {
     
     @State private var selectedPicture = Int.random(in: 0...3)
     
+    @State private var rating = 3
+    
     var body: some View {
-        VStack {
-            Text("Your score is")
-            Text("1000")
-                .font(.title)
-        }
-        .accessibilityElement(children: .ignore)
-        .accessibility(label: Text("Your score is 1000"))
+        Stepper("Rate our service \(rating)/5", value: $rating, in: 1...5)
+        .accessibility(value: Text("\(rating) out of 5"))
         
 //        Image(pictures[selectedPicture])
 //            .resizable()
