@@ -17,6 +17,8 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var scoreWords = 0
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -33,12 +35,16 @@ struct ContentView: View {
                     .accessibilityElement(children: .ignore)
                     .accessibility(label: Text("\(word), \(word.count) letters "))
                 }
+                
+                Text("Score is \(scoreWords)")
+                .padding()
             }
             .navigationBarTitle(rootWord)
             .onAppear(perform: startGame)
             .alert(isPresented: $showingError) {
                 Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
             }
+            .navigationBarItems(trailing: Button("Restart") { self.startGame() })
         }
     }
     
@@ -66,6 +72,8 @@ struct ContentView: View {
         
         usedWords.insert(answer, at: 0)
         newWord = ""
+        
+        score()
     }
     
     func startGame() {
@@ -74,6 +82,8 @@ struct ContentView: View {
             if let stringContent = try? String(contentsOf: fileURL) {
                 let allWords = stringContent.components(separatedBy: "\n")
                 rootWord = allWords.randomElement() ?? "silkworm"
+                usedWords.removeAll()
+                score()
                 return
             }
         }
@@ -100,9 +110,10 @@ struct ContentView: View {
     }
     
     func isReal(word: String) -> Bool {
+        if word.count < 3 { return false }
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
-        let misspelled = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "EN")
+        let misspelled = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
         
         return misspelled.location == NSNotFound
     }
@@ -111,6 +122,10 @@ struct ContentView: View {
         errorTitle = title
         errorMessage = message
         showingError = true
+    }
+    
+    func score() {
+        scoreWords = usedWords.makeIterator().joined().utf16.underestimatedCount
     }
 }
 
