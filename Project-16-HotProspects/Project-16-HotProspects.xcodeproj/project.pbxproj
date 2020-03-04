@@ -15,6 +15,7 @@
 		34C717B8240E0B2B00032F94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C717B7240E0B2B00032F94 /* Assets.xcassets */; };
 		34C717BB240E0B2B00032F94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C717BA240E0B2B00032F94 /* Preview Assets.xcassets */; };
 		34C717BE240E0B2B00032F94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C717BC240E0B2B00032F94 /* LaunchScreen.storyboard */; };
+		34C91F252410290100755711 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C91F242410290100755711 /* Prospect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		34C717BA240E0B2B00032F94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		34C717BD240E0B2B00032F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34C717BF240E0B2B00032F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C91F242410290100755711 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				34C717B1240E0B2700032F94 /* AppDelegate.swift */,
 				34C717B3240E0B2700032F94 /* SceneDelegate.swift */,
 				34C717B5240E0B2700032F94 /* ContentView.swift */,
+				34C91F242410290100755711 /* Prospect.swift */,
 				347CA9F724101BE6003CEA97 /* ProspectsView.swift */,
 				347CA9F924101BEF003CEA97 /* MeView.swift */,
 				34C717B7240E0B2B00032F94 /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				347CA9F824101BE6003CEA97 /* ProspectsView.swift in Sources */,
+				34C91F252410290100755711 /* Prospect.swift in Sources */,
 				34C717B2240E0B2700032F94 /* AppDelegate.swift in Sources */,
 				34C717B4240E0B2700032F94 /* SceneDelegate.swift in Sources */,
 				34C717B6240E0B2700032F94 /* ContentView.swift in Sources */,
