@@ -12,7 +12,7 @@ class Prospect: Identifiable, Codable {
     let id = UUID()
     var name = "Anonymous"
     var emailAddress = ""
-    fileprivate(set) var isContadted = false
+    fileprivate(set) var isContacted = false
 }
 
 class Prospects: ObservableObject {
@@ -43,7 +43,7 @@ class Prospects: ObservableObject {
     
     func toggle(_ prospect: Prospect) {
         objectWillChange.send()
-        prospect.isContadted.toggle()
+        prospect.isContacted.toggle()
         save()
     }
 }
