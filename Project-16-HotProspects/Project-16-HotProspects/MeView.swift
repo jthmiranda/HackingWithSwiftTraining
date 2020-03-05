@@ -7,26 +7,51 @@
 //
 
 import SwiftUI
+import CoreImage.CIFilterBuiltins
 
 struct MeView: View {
-    @State private var showingActionSheet = false
-    @State private var backgroundColor = Color.white
+    @State private var name = "Anonymous"
+    @State private var emailAddress = "you@yoursite.com"
+    
+    let context = CIContext()
+    let filter = CIFilter.qrCodeGenerator()
     
     var body: some View {
-        Text("Hello, World!")
-            .frame(width: 300, height: 300)
-            .background(backgroundColor)
-            .onTapGesture {
-                self.showingActionSheet = true
+        NavigationView {
+            VStack {
+                TextField("Name", text: $name)
+                    .textContentType(.name)
+                    .font(.title)
+                    .padding(.horizontal)
+                
+                TextField("Email address", text: $emailAddress)
+                    .textContentType(.emailAddress)
+                    .font(.title)
+                    .padding([.horizontal, .bottom])
+                
+                Spacer()
+                
+                Image(uiImage: generateQRCode(from: "\(name)\n\(emailAddress)"))
+                    .interpolation(.none)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
             }
-            .actionSheet(isPresented: $showingActionSheet) {
-                ActionSheet(title: Text("Change background"), message: Text("Select a new Color"), buttons: [
-                    .default(Text("Red")) { self.backgroundColor = .red },
-                    .default(Text("Green")) { self.backgroundColor = .green },
-                    .default(Text("Blue")) { self.backgroundColor = .blue},
-                    .cancel()
-                ])
+        .navigationBarTitle("Your code")
+        }
+    }
+    
+    func generateQRCode(from string: String) -> UIImage {
+        let data = Data(string.utf8)
+        filter.setValue(data, forKey: "inputMessage")
+        
+        if let outputImage = filter.outputImage {
+            if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+                return UIImage(cgImage: cgimg)
             }
+        }
+        
+        return UIImage(systemName: "xmark.circle") ?? UIImage()
     }
 }
 
