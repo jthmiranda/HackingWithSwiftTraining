@@ -9,38 +9,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    // using tolerarance allows to iOS to perform energy optimization
+    // it is something called timer coalescing
+    // but if you need to keep time stricly then leaving off the tolerance
+    let timer = Timer.publish(every: 1, tolerance: 0.5 , on: .main, in: .common).autoconnect()
+    @State private var counter = 0
     
     var body: some View {
-        VStack {
-            VStack {
-                Text("Hello")
-                // SwiftUI won't trigger actions when a stack spacer is tapped
-                Spacer().frame(height: 100)
-                
-                Text("World")
+        Text("Hello world")
+            .onReceive(timer) { time in
+                if self.counter == 5 {
+                    self.timer.upstream.connect().cancel()
+                } else {
+                    print("the time is now \(time)")
+                }
+                self.counter += 1
             }
-            .onTapGesture {
-                print("Vstack tapped!")
-            }
-            // this is anothe way to be able to tap a control below when using Zstack
-            // .allowsHitTesting(false)
-            
-            Spacer().frame(height: 100)
-            
-            VStack {
-                Text("Hello")
-                
-                Spacer().frame(height: 100)
-                
-                Text("World")
-            }
-                // If you want the whole vstack tappalge use contentShape modifier
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    print("Vstack tapped!")
-            }
-        }
     }
     
 }
