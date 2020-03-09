@@ -23,6 +23,8 @@ struct ContentView: View {
             .onTapGesture {
                 print("Vstack tapped!")
             }
+            // this is anothe way to be able to tap a control below when using Zstack
+            // .allowsHitTesting(false)
             
             Spacer().frame(height: 100)
             
