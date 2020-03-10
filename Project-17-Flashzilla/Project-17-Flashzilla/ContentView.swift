@@ -9,22 +9,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    // using tolerarance allows to iOS to perform energy optimization
-    // it is something called timer coalescing
-    // but if you need to keep time stricly then leaving off the tolerance
-    let timer = Timer.publish(every: 1, tolerance: 0.5 , on: .main, in: .common).autoconnect()
-    @State private var counter = 0
+    
     
     var body: some View {
-        Text("Hello world")
-            .onReceive(timer) { time in
-                if self.counter == 5 {
-                    self.timer.upstream.connect().cancel()
-                } else {
-                    print("the time is now \(time)")
+        VStack {
+            Text("Going background")
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+                    print("Moving to the background")
                 }
-                self.counter += 1
-            }
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+                    print("Moving back to the foreground!")
+                }
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.userDidTakeScreenshotNotification)) { _ in
+                    print("User took a screenshot!")
+                }
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.significantTimeChangeNotification)) { _ in
+                    print("User changes clock or daylight savings")
+                }
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.keyboardDidShowNotification)) { _ in
+                    print("Keyboars is show")
+                }
+        }
+        
+        
     }
     
 }
