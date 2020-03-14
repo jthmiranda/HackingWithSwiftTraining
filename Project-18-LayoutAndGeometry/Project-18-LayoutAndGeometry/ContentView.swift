@@ -10,7 +10,35 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+//        HStack(alignment: .lastTextBaseline) {
+//            Text("Live")
+//                .font(.caption)
+//            Text("long")
+//            Text("and")
+//                .font(.title)
+//            Text("prosper")
+//                .font(.largeTitle)
+//        }
+        
+        
+//        VStack(alignment: .leading) {
+//            Text("Hello, world!")
+//                .alignmentGuide(.leading) { d in d[.trailing] }
+//            Text("This is a longer line of text")
+//        }
+//        .background(Color.red)
+//        .frame(width: 400, height: 400)
+//        .background(Color.blue)
+        
+        VStack(alignment: .leading) {
+            ForEach(0..<100) { position in
+                Text("Numbe \(position)")
+                    .alignmentGuide(.leading) { _ in CGFloat(position)}
+            }
+        }
+        .background(Color.red)
+        .frame(width: 400, height: 400)
+        .background(Color.blue)
     }
 }
 
