@@ -10,36 +10,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        HStack(alignment: .lastTextBaseline) {
-//            Text("Live")
-//                .font(.caption)
-//            Text("long")
-//            Text("and")
-//                .font(.title)
-//            Text("prosper")
-//                .font(.largeTitle)
-//        }
-        
-        
-//        VStack(alignment: .leading) {
-//            Text("Hello, world!")
-//                .alignmentGuide(.leading) { d in d[.trailing] }
-//            Text("This is a longer line of text")
-//        }
-//        .background(Color.red)
-//        .frame(width: 400, height: 400)
-//        .background(Color.blue)
-        
-        VStack(alignment: .leading) {
-            ForEach(0..<100) { position in
-                Text("Numbe \(position)")
-                    .alignmentGuide(.leading) { _ in CGFloat(position)}
+        HStack(alignment: .top) {
+            VStack {
+                Text("@jthmiranda")
+                    .alignmentGuide(.midAccountAndName) { d in d[VerticalAlignment.center]}
+                Image("jonathan-miranda")
+                    .resizable()
+                    .frame(width: 64, height: 64)
+            }
+            
+            VStack {
+                Text("Full name:")
+                Text("JONATHAN MIRANDA")
+                    .alignmentGuide(.midAccountAndName) { d in d[VerticalAlignment.center]}
+                    .font(.largeTitle)
             }
         }
-        .background(Color.red)
-        .frame(width: 400, height: 400)
-        .background(Color.blue)
     }
+}
+
+extension VerticalAlignment {
+    enum MidAccountAndName: AlignmentID {
+        static func defaultValue(in context: ViewDimensions) -> CGFloat {
+            context[.top]
+        }
+    }
+    
+    static let midAccountAndName = VerticalAlignment(MidAccountAndName.self)
 }
 
 struct ContentView_Previews: PreviewProvider {
