@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var cards = [Card](repeating: Card.example, count: 10)
+    @State private var cards = [Card]()//(repeating: Card.example, count: 10)
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     @Environment(\.accessibilityEnabled) var accessibilityEnabled
     
@@ -17,6 +17,8 @@ struct ContentView: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State private var isActive = true
+    
+    @State private var showingEditScreen = false
     
     var body: some View {
         ZStack {
@@ -61,6 +63,25 @@ struct ContentView: View {
                 }
             }
             
+            VStack {
+                HStack {
+                    Spacer()
+                    
+                    Button(action: {
+                        self.showingEditScreen = true
+                    }) {
+                        Image(systemName: "plus.circle")
+                            .padding()
+                            .background(Color.black.opacity(0.7))
+                            .clipShape(Circle())
+                    }
+                }
+                
+                Spacer()
+            }
+            .foregroundColor(.white)
+            .font(.largeTitle)
+            .padding()
             
             if differentiateWithoutColor || accessibilityEnabled {
                 VStack {
@@ -73,7 +94,7 @@ struct ContentView: View {
                             }
                         }) {
                             Image(systemName: "xmark.circle")
-                                .padding(.all, 15)
+                                .padding()
                                 .background(Color.black.opacity(0.7))
                                 .clipShape(Circle())
                         }
@@ -112,6 +133,10 @@ struct ContentView: View {
                 self.isActive = true
             }
         }
+        .sheet(isPresented: $showingEditScreen, onDismiss: resetCards) {
+            EditCards()
+        }
+        .onAppear(perform: resetCards)
     }
     
     //this func will be effective by the invocation a closure inside CardView
@@ -127,9 +152,18 @@ struct ContentView: View {
     
     // func to restart again
     func resetCards() {
-        cards = [Card](repeating: Card.example, count: 10)
+        //cards = [Card](repeating: Card.example, count: 10)
         timeRemaining = 100
         isActive = true
+        loadData()
+    }
+    
+    func loadData() {
+        if let data = UserDefaults.standard.data(forKey: "Cards") {
+            if let decoded = try? JSONDecoder().decode([Card].self, from: data) {
+                self.cards = decoded
+            }
+        }
     }
 }
 
