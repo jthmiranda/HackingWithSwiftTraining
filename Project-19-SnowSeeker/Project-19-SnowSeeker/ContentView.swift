@@ -8,22 +8,29 @@
 
 import SwiftUI
 
-struct User: Identifiable {
-    var id = "Taylor Swift"
-}
-
-struct ContentView: View {
-    @State private var selectedUser: User? = nil
-    @State private var isShowingAlert =  false
+struct UserView: View {
+    
     
     var body: some View {
-        Text("Hello, World!")
-            .onTapGesture {
-                self.selectedUser = User()
-                self.isShowingAlert = true
+        Group {
+            Text("Name: Jonathan")
+            Text("Country: El Salvador")
+            Text("Pets: Reso, Chupi and  Cripto")
+        }
+    }
+}
+
+
+struct ContentView: View {
+    @Environment(\.horizontalSizeClass) var sizeClass
+    
+    var body: some View {
+        Group {
+            if sizeClass == .compact {
+                VStack(content: UserView.init)
+            } else {
+                HStack(content: UserView.init)
             }
-        .alert(isPresented: $isShowingAlert) { // prefer using the item's parameter
-            Alert(title: Text(selectedUser!.id)) // avoid this unwrap
         }
     }
 }
