@@ -8,29 +8,35 @@
 
 import SwiftUI
 
-struct UserView: View {
-    
-    
-    var body: some View {
-        Group {
-            Text("Name: Jonathan")
-            Text("Country: El Salvador")
-            Text("Pets: Reso, Chupi and  Cripto")
-        }
-    }
-}
-
 
 struct ContentView: View {
-    @Environment(\.horizontalSizeClass) var sizeClass
+    let resorts: [Resort] = Bundle.main.decode("resorts.json")
     
     var body: some View {
-        Group {
-            if sizeClass == .compact {
-                VStack(content: UserView.init)
-            } else {
-                HStack(content: UserView.init)
+        NavigationView {
+            List(resorts) { resort in
+                NavigationLink(destination: Text(resort.name)) {
+                    Image(resort.country)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 25)
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 5)
+                        )
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 5)
+                                .stroke(Color.black, lineWidth: 1)
+                        )
+                    
+                    VStack(alignment: .leading) {
+                        Text(resort.name)
+                            .font(.headline)
+                        Text("\(resort.runs) runs")
+                            .foregroundColor(.secondary)
+                    }
+                }
             }
+            .navigationBarTitle("Resorts")
         }
     }
 }
