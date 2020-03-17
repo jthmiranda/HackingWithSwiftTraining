@@ -16,6 +16,7 @@
 		344F4DDF242068DE00B34B74 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = 344F4DDE242068DE00B34B74 /* resorts.json */; };
 		344F4DE12420697B00B34B74 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344F4DE02420697B00B34B74 /* Resort.swift */; };
 		344F4DE324206ABD00B34B74 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344F4DE224206ABD00B34B74 /* Bundle-Decodable.swift */; };
+		344F4DE5242073D500B34B74 /* WellcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344F4DE4242073D500B34B74 /* WellcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		344F4DDE242068DE00B34B74 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
 		344F4DE02420697B00B34B74 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
 		344F4DE224206ABD00B34B74 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		344F4DE4242073D500B34B74 /* WellcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				344F4DCA24202C9400B34B74 /* AppDelegate.swift */,
 				344F4DCC24202C9400B34B74 /* SceneDelegate.swift */,
 				344F4DCE24202C9400B34B74 /* ContentView.swift */,
+				344F4DE4242073D500B34B74 /* WellcomeView.swift */,
 				344F4DE02420697B00B34B74 /* Resort.swift */,
 				344F4DE224206ABD00B34B74 /* Bundle-Decodable.swift */,
 				344F4DD024202C9700B34B74 /* Assets.xcassets */,
@@ -158,6 +161,7 @@
 			files = (
 				344F4DCB24202C9400B34B74 /* AppDelegate.swift in Sources */,
 				344F4DCD24202C9400B34B74 /* SceneDelegate.swift in Sources */,
+				344F4DE5242073D500B34B74 /* WellcomeView.swift in Sources */,
 				344F4DE324206ABD00B34B74 /* Bundle-Decodable.swift in Sources */,
 				344F4DE12420697B00B34B74 /* Resort.swift in Sources */,
 				344F4DCF24202C9400B34B74 /* ContentView.swift in Sources */,

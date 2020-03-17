@@ -37,6 +37,19 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("Resorts")
+            
+            WellcomeView()
+        }
+        .phoneOnlyStackNavigationView()
+    }
+}
+
+extension View {
+    func phoneOnlyStackNavigationView() -> some View {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return AnyView(self.navigationViewStyle(StackNavigationViewStyle()))
+        } else {
+            return AnyView(self)
         }
     }
 }
