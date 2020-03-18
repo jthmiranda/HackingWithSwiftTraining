@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ResortView: View {
     @Environment(\.horizontalSizeClass) var sizeClass
+    @State private var selectedFalicity: Facility?
     let resort: Resort
     
     var body: some View {
@@ -43,13 +44,26 @@ struct ResortView: View {
                         .font(.headline)
                     
                     //Text(resort.facilities.joined(separator: ", "))
-                    Text(ListFormatter.localizedString(byJoining: resort.facilities))
-                        .padding(.vertical)
+//                    Text(ListFormatter.localizedString(byJoining: resort.facilities))
+//                        .padding(.vertical)
+                    HStack {
+                        ForEach(resort.facilityTypes) { facility in
+                            facility.icon
+                                .font(.title)
+                                .onTapGesture {
+                                    self.selectedFalicity = facility
+                                }
+                        }
+                    }
+                    .padding(.vertical)
                 }
                 .padding()
             }
         }
         .navigationBarTitle(Text("\(resort.name), \(resort.country)"), displayMode: .inline)
+        .alert(item: $selectedFalicity) { facility in
+            facility.alert
+        }
     }
 }
 
