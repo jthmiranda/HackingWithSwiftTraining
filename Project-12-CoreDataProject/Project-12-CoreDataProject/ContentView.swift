@@ -8,9 +8,17 @@
 
 import SwiftUI
 
+struct Student: Hashable {
+    var name: String
+}
+
 struct ContentView: View {
+    let students = [Student(name: "Harry"), Student(name: "Logan")]
+    
     var body: some View {
-        Text("Hello, World!")
+        List(students, id: \.self) { student in
+            Text(student.name)
+        }
     }
 }
 
