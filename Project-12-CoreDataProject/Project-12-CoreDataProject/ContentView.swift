@@ -7,30 +7,41 @@
 //
 
 import SwiftUI
-
+import CoreData
 
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Wizard.entity(), sortDescriptors: []) var wizards: FetchedResults<Wizard>
+    @FetchRequest(
+        entity: Ship.entity(),
+        sortDescriptors: [],
+        predicate: NSPredicate(format: "NOT name BEGINSWITH[c]", "e")
+    ) var ships: FetchedResults<Ship>
     
     var body: some View {
         VStack {
-            List(wizards, id: \.self) { wizard in
-                Text(wizard.name ?? "Unknown name")
+            List(ships, id: \.self) { ship in
+                Text(ship.name ?? "Unknown name")
             }
             
-            Button("Add") {
-                let wizard = Wizard(context: self.moc)
-                wizard.name = "Harry Potter"
-            }
-            
-            Button("Save") {
-                do {
-                    try self.moc.save()
-                } catch {
-                    print(error.localizedDescription)
-                }
+            Button("Adding ships") {
+                let ship1 = Ship(context: self.moc)
+                ship1.name = "Enterprise"
+                ship1.universe = "Star Treck"
+                
+                let ship2 = Ship(context: self.moc)
+                ship2.name = "Stargazer"
+                ship2.universe = "Star Trek"
+                
+                let ship3 = Ship(context: self.moc)
+                ship3.name = "Millenium Falcon"
+                ship3.universe = "Star Wars"
+                
+                let ship4 = Ship(context: self.moc)
+                ship4.name = "Death Star"
+                ship4.universe = "Star Wars"
+                
+                try? self.moc.save()
             }
         }
     }
