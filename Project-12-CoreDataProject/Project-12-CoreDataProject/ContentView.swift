@@ -15,7 +15,7 @@ struct ContentView: View {
     @FetchRequest(
         entity: Ship.entity(),
         sortDescriptors: [],
-        predicate: NSPredicate(format: "NOT name BEGINSWITH[c]", "e")
+        predicate: NSPredicate(format: "NOT name BEGINSWITH[c] %@", "e")
     ) var ships: FetchedResults<Ship>
     
     var body: some View {
