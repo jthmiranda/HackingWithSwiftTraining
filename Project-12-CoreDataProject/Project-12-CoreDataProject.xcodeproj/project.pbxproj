@@ -16,6 +16,8 @@
 		3421505E242C4D2700874CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3421505C242C4D2700874CB4 /* LaunchScreen.storyboard */; };
 		3435276C24303F3900F01168 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435276A24303F3900F01168 /* Movie+CoreDataClass.swift */; };
 		3435276D24303F3900F01168 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435276B24303F3900F01168 /* Movie+CoreDataProperties.swift */; };
+		34903FCC24357D3600BDC652 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34903FCA24357D3600BDC652 /* Singer+CoreDataClass.swift */; };
+		34903FCD24357D3600BDC652 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34903FCB24357D3600BDC652 /* Singer+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3421505F242C4D2700874CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3435276A24303F3900F01168 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3435276B24303F3900F01168 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		34903FCA24357D3600BDC652 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		34903FCB24357D3600BDC652 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		3421504D242C4D2300874CB4 /* Project-12-CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				34903FCA24357D3600BDC652 /* Singer+CoreDataClass.swift */,
+				34903FCB24357D3600BDC652 /* Singer+CoreDataProperties.swift */,
 				3435276A24303F3900F01168 /* Movie+CoreDataClass.swift */,
 				3435276B24303F3900F01168 /* Movie+CoreDataProperties.swift */,
 				3421504E242C4D2300874CB4 /* AppDelegate.swift */,
@@ -155,10 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34903FCC24357D3600BDC652 /* Singer+CoreDataClass.swift in Sources */,
 				3421504F242C4D2300874CB4 /* AppDelegate.swift in Sources */,
 				34215051242C4D2300874CB4 /* SceneDelegate.swift in Sources */,
 				34215056242C4D2300874CB4 /* ContentView.swift in Sources */,
 				3435276C24303F3900F01168 /* Movie+CoreDataClass.swift in Sources */,
+				34903FCD24357D3600BDC652 /* Singer+CoreDataProperties.swift in Sources */,
 				3435276D24303F3900F01168 /* Movie+CoreDataProperties.swift in Sources */,
 				34215054242C4D2300874CB4 /* Project_12_CoreDataProject.xcdatamodeld in Sources */,
 			);
