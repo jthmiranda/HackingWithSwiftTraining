@@ -16,6 +16,7 @@
 		3421505E242C4D2700874CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3421505C242C4D2700874CB4 /* LaunchScreen.storyboard */; };
 		3435276C24303F3900F01168 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435276A24303F3900F01168 /* Movie+CoreDataClass.swift */; };
 		3435276D24303F3900F01168 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435276B24303F3900F01168 /* Movie+CoreDataProperties.swift */; };
+		3483AAFC243826280015A568 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3483AAFB243826280015A568 /* FilteredList.swift */; };
 		34903FCC24357D3600BDC652 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34903FCA24357D3600BDC652 /* Singer+CoreDataClass.swift */; };
 		34903FCD24357D3600BDC652 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34903FCB24357D3600BDC652 /* Singer+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		3421505F242C4D2700874CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3435276A24303F3900F01168 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3435276B24303F3900F01168 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3483AAFB243826280015A568 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 		34903FCA24357D3600BDC652 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
 		34903FCB24357D3600BDC652 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				3421504E242C4D2300874CB4 /* AppDelegate.swift */,
 				34215050242C4D2300874CB4 /* SceneDelegate.swift */,
 				34215055242C4D2300874CB4 /* ContentView.swift */,
+				3483AAFB243826280015A568 /* FilteredList.swift */,
 				34215057242C4D2700874CB4 /* Assets.xcassets */,
 				3421505C242C4D2700874CB4 /* LaunchScreen.storyboard */,
 				3421505F242C4D2700874CB4 /* Info.plist */,
@@ -163,6 +166,7 @@
 			files = (
 				34903FCC24357D3600BDC652 /* Singer+CoreDataClass.swift in Sources */,
 				3421504F242C4D2300874CB4 /* AppDelegate.swift in Sources */,
+				3483AAFC243826280015A568 /* FilteredList.swift in Sources */,
 				34215051242C4D2300874CB4 /* SceneDelegate.swift in Sources */,
 				34215056242C4D2300874CB4 /* ContentView.swift in Sources */,
 				3435276C24303F3900F01168 /* Movie+CoreDataClass.swift in Sources */,
