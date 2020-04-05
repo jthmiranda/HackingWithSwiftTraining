@@ -19,6 +19,10 @@
 		3483AAFC243826280015A568 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3483AAFB243826280015A568 /* FilteredList.swift */; };
 		34903FCC24357D3600BDC652 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34903FCA24357D3600BDC652 /* Singer+CoreDataClass.swift */; };
 		34903FCD24357D3600BDC652 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34903FCB24357D3600BDC652 /* Singer+CoreDataProperties.swift */; };
+		34A6CBD424395D0600E314D2 /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6CBD024395D0600E314D2 /* Country+CoreDataClass.swift */; };
+		34A6CBD524395D0600E314D2 /* Country+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6CBD124395D0600E314D2 /* Country+CoreDataProperties.swift */; };
+		34A6CBD624395D0600E314D2 /* Candy+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6CBD224395D0600E314D2 /* Candy+CoreDataClass.swift */; };
+		34A6CBD724395D0600E314D2 /* Candy+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6CBD324395D0600E314D2 /* Candy+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		3483AAFB243826280015A568 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 		34903FCA24357D3600BDC652 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
 		34903FCB24357D3600BDC652 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		34A6CBD024395D0600E314D2 /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		34A6CBD124395D0600E314D2 /* Country+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		34A6CBD224395D0600E314D2 /* Candy+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		34A6CBD324395D0600E314D2 /* Candy+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,10 @@
 		3421504D242C4D2300874CB4 /* Project-12-CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				34A6CBD024395D0600E314D2 /* Country+CoreDataClass.swift */,
+				34A6CBD124395D0600E314D2 /* Country+CoreDataProperties.swift */,
+				34A6CBD224395D0600E314D2 /* Candy+CoreDataClass.swift */,
+				34A6CBD324395D0600E314D2 /* Candy+CoreDataProperties.swift */,
 				34903FCA24357D3600BDC652 /* Singer+CoreDataClass.swift */,
 				34903FCB24357D3600BDC652 /* Singer+CoreDataProperties.swift */,
 				3435276A24303F3900F01168 /* Movie+CoreDataClass.swift */,
@@ -169,10 +181,14 @@
 				3483AAFC243826280015A568 /* FilteredList.swift in Sources */,
 				34215051242C4D2300874CB4 /* SceneDelegate.swift in Sources */,
 				34215056242C4D2300874CB4 /* ContentView.swift in Sources */,
+				34A6CBD724395D0600E314D2 /* Candy+CoreDataProperties.swift in Sources */,
 				3435276C24303F3900F01168 /* Movie+CoreDataClass.swift in Sources */,
+				34A6CBD524395D0600E314D2 /* Country+CoreDataProperties.swift in Sources */,
 				34903FCD24357D3600BDC652 /* Singer+CoreDataProperties.swift in Sources */,
 				3435276D24303F3900F01168 /* Movie+CoreDataProperties.swift in Sources */,
+				34A6CBD424395D0600E314D2 /* Country+CoreDataClass.swift in Sources */,
 				34215054242C4D2300874CB4 /* Project_12_CoreDataProject.xcdatamodeld in Sources */,
+				34A6CBD624395D0600E314D2 /* Candy+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
