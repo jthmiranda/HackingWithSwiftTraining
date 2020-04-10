@@ -19,3 +19,17 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+struct User: Codable {
+    var id: String
+    var name: String
+    var age: Int
+    var company: String
+    var friends: [Friend]
+}
+
+struct Friend: Codable {
+    var id: String
+    var name: String
+}
