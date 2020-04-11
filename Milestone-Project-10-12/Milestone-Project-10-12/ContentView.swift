@@ -9,8 +9,44 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var users = [User]()
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List(users, id: \.id) { user in
+                NavigationLink(destination: Text(user.name)) {
+                    Text(user.name)
+                    
+                    Text(user.company)
+                }
+            }
+            .onAppear(perform: loadData)
+            .navigationBarTitle("Usuarios")
+        }
+    }
+    
+    func loadData() {
+        guard let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json") else {
+            print("Invalid URL")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            let decoder = JSONDecoder()
+            if let data = data {
+                if let decodeResponse = try? decoder.decode([User].self, from: data) {
+                    DispatchQueue.main.async {
+                        print(decodeResponse.first.debugDescription)
+                        self.users = decodeResponse
+                    }
+                    return
+                }
+            }
+            
+            print("fetch failure: \(error?.localizedDescription ?? "Unknown error")")
+        }.resume()
+        
+        
     }
 }
 
