@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34BD2B442442386A00E18E31 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD2B432442386A00E18E31 /* DetailView.swift */; };
 		34DE8678243EC436002B5CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE8677243EC436002B5CBF /* AppDelegate.swift */; };
 		34DE867A243EC436002B5CBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE8679243EC436002B5CBF /* SceneDelegate.swift */; };
 		34DE867D243EC436002B5CBF /* Milestone_Project_10_12.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34DE867B243EC436002B5CBF /* Milestone_Project_10_12.xcdatamodeld */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34BD2B432442386A00E18E31 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		34DE8674243EC436002B5CBF /* Milestone-Project-10-12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milestone-Project-10-12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE8677243EC436002B5CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34DE8679243EC436002B5CBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				34DE8677243EC436002B5CBF /* AppDelegate.swift */,
 				34DE8679243EC436002B5CBF /* SceneDelegate.swift */,
 				34DE867E243EC436002B5CBF /* ContentView.swift */,
+				34BD2B432442386A00E18E31 /* DetailView.swift */,
 				34DE8680243EC438002B5CBF /* Assets.xcassets */,
 				34DE8685243EC438002B5CBF /* LaunchScreen.storyboard */,
 				34DE8688243EC438002B5CBF /* Info.plist */,
@@ -152,6 +155,7 @@
 				34DE867D243EC436002B5CBF /* Milestone_Project_10_12.xcdatamodeld in Sources */,
 				34DE8678243EC436002B5CBF /* AppDelegate.swift in Sources */,
 				34DE867F243EC436002B5CBF /* ContentView.swift in Sources */,
+				34BD2B442442386A00E18E31 /* DetailView.swift in Sources */,
 				34DE867A243EC436002B5CBF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

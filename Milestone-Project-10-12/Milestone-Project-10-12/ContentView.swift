@@ -14,10 +14,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(users, id: \.id) { user in
-                NavigationLink(destination: Text(user.name)) {
+                NavigationLink(destination: DetailView(user: user)) {
                     Text(user.name)
-                    
-                    Text(user.company)
+                        .font(.headline)
                 }
             }
             .onAppear(perform: loadData)
@@ -36,7 +35,7 @@ struct ContentView: View {
             if let data = data {
                 if let decodeResponse = try? decoder.decode([User].self, from: data) {
                     DispatchQueue.main.async {
-                        print(decodeResponse.first.debugDescription)
+                        //print(decodeResponse.first.debugDescription)
                         self.users = decodeResponse
                     }
                     return
