@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		348FD839244425F300C7AE06 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348FD838244425F300C7AE06 /* FriendsView.swift */; };
 		34BD2B442442386A00E18E31 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD2B432442386A00E18E31 /* DetailView.swift */; };
 		34DE8678243EC436002B5CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE8677243EC436002B5CBF /* AppDelegate.swift */; };
 		34DE867A243EC436002B5CBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE8679243EC436002B5CBF /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		348FD838244425F300C7AE06 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		34BD2B432442386A00E18E31 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		34DE8674243EC436002B5CBF /* Milestone-Project-10-12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milestone-Project-10-12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE8677243EC436002B5CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				34DE8677243EC436002B5CBF /* AppDelegate.swift */,
 				34DE8679243EC436002B5CBF /* SceneDelegate.swift */,
 				34DE867E243EC436002B5CBF /* ContentView.swift */,
+				348FD838244425F300C7AE06 /* FriendsView.swift */,
 				34BD2B432442386A00E18E31 /* DetailView.swift */,
 				34DE8680243EC438002B5CBF /* Assets.xcassets */,
 				34DE8685243EC438002B5CBF /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				348FD839244425F300C7AE06 /* FriendsView.swift in Sources */,
 				34DE867D243EC436002B5CBF /* Milestone_Project_10_12.xcdatamodeld in Sources */,
 				34DE8678243EC436002B5CBF /* AppDelegate.swift in Sources */,
 				34DE867F243EC436002B5CBF /* ContentView.swift in Sources */,

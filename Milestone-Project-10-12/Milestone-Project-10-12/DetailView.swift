@@ -13,24 +13,31 @@ struct DetailView: View {
     
     var body: some View {
         VStack {
-            HStack {
+            VStack {
                 Text(user.name)
-                
+                    .font(.title)
                 Text("\(user.age) years old")
+                    .font(.subheadline)
             }
+            .padding([.top, .bottom])
             
             Text("Company: \(user.company)")
+                .font(.body)
             Text("ID: \(user.id)")
+                .font(.capption)
             Spacer()
             
-            Text("Friend")
-            ForEach(user.friends, id: \.id) { friend in
-                Text(friend.name)
+            HStack {
+                Text("Friends")
+                .font(.headline)
+                Spacer()
             }
+            .padding([.top, .leading])
+            FriendsView(friends: user.friends)
             
-            Spacer()
+            
         }
-        .navigationBarTitle(Text(user.name), displayMode: .inline)
+        .navigationBarTitle("Usuario", displayMode: .inline)
     }
 }
 
