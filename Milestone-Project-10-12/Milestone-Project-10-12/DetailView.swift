@@ -23,9 +23,18 @@ struct DetailView: View {
             
             Text("Company: \(user.company)")
                 .font(.body)
-            Text("ID: \(user.id)")
-                .font(.capption)
-            Spacer()
+            Text("email: \(user.email)")
+                .font(.caption)
+            
+            VStack {
+                Text(user.address)
+                    .font(.caption)
+                Text("About: \(user.about)")
+                    .font(.subheadline)
+                
+                .padding()
+            }
+            .padding([.top, .bottom])
             
             HStack {
                 Text("Friends")
@@ -41,8 +50,8 @@ struct DetailView: View {
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView(user: User(id: "algen", name: "hola", age: 5, company: "company", friends: []))
-    }
-}
+//struct DetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DetailView(user: User(id: "algen", name: "hola", age: 5, company: "company", friends: []))
+//    }
+//}
