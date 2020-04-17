@@ -37,6 +37,12 @@ struct DetailView: View {
             .padding([.top, .bottom])
             
             HStack {
+                ForEach(user.tags, id: \.self) { tag in
+                    Text(tag)
+                }
+            }
+            
+            HStack {
                 Text("Friends")
                 .font(.headline)
                 Spacer()
@@ -50,8 +56,8 @@ struct DetailView: View {
     }
 }
 
-//struct DetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailView(user: User(id: "algen", name: "hola", age: 5, company: "company", friends: []))
-//    }
-//}
+struct DetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailView(user: User(id: "1234", isActive: true, name: "Jonathan", age: 35, company: "Coinbase", email: "hola@mail.com", address: "234 dr avenue", about: "myself", registered: "this is a date", tags: ["a", "big", "change"], friends: []))
+    }
+}
