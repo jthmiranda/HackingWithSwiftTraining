@@ -18,6 +18,8 @@ struct DetailView: View {
                     .font(.title)
                 Text("\(user.age) years old")
                     .font(.subheadline)
+                Text("\(user.registered)")
+                    .font(.subheadline)
             }
             .padding([.top, .bottom])
             
