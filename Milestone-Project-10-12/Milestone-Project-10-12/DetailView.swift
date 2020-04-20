@@ -38,11 +38,6 @@ struct DetailView: View {
             }
             .padding([.top, .bottom])
             
-            HStack {
-                ForEach(user.tags, id: \.self) { tag in
-                    Text(tag)
-                }
-            }
             
             HStack {
                 Text("Friends")
