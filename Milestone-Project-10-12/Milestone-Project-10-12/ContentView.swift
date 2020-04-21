@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var users = [User]()
+    var address = "https://www.hackingwithswift.com/samples/friendface.json"
     
     var body: some View {
         NavigationView {
@@ -25,7 +26,7 @@ struct ContentView: View {
     }
     
     func loadData() {
-        guard let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json") else {
+        guard let url = URL(string: address) else {
             print("Invalid URL")
             return
         }
