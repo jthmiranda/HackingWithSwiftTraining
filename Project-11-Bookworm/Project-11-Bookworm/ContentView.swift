@@ -7,52 +7,35 @@
 //
 
 import SwiftUI
-import CoreData
+
+struct PushButton: View {
+    let title: String
+    @Binding var isOn: Bool
+    
+    var onColor = [Color.red, Color.yellow]
+    var offColor = [Color(white: 0.6), Color(white: 0.4)]
+    
+    var body: some View {
+        Button(title) {
+            self.isOn.toggle()
+        }
+        .padding()
+        .background(LinearGradient(gradient: Gradient(colors: isOn ? onColor : offColor), startPoint: .top, endPoint: .bottom))
+        .foregroundColor(.white)
+        .clipShape(Capsule())
+        .shadow(radius: isOn ? 0 : 5)
+    }
+}
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Country.entity(), sortDescriptors:[]) var countries: FetchedResults<Country>
+    @State private var rememberMe = false
     
     var body: some View {
         VStack {
-            List {
-                ForEach(countries, id: \.self) { country in
-                    Section(header: Text(country.wrappedFullName)) {
-                        ForEach(country.candyArray, id: \.self) { candy in
-                            Text(candy.wrappedName)
-                        }
-                    }
-                }
-            }
-            
-            Button("Add") {
-                let candy1 = Candy(context: self.moc)
-                candy1.name = "Mars"
-                candy1.origin = Country(context: self.moc)
-                candy1.origin?.shortName = "UK"
-                candy1.origin?.fullName = "United Kingdom"
-
-                let candy2 = Candy(context: self.moc)
-                candy2.name = "KitKat"
-                candy2.origin = Country(context: self.moc)
-                candy2.origin?.shortName = "UK"
-                candy2.origin?.fullName = "United Kingdom"
-
-                let candy3 = Candy(context: self.moc)
-                candy3.name = "Twix"
-                candy3.origin = Country(context: self.moc)
-                candy3.origin?.shortName = "UK"
-                candy3.origin?.fullName = "United Kingdom"
-
-                let candy4 = Candy(context: self.moc)
-                candy4.name = "Toblerone"
-                candy4.origin = Country(context: self.moc)
-                candy4.origin?.shortName = "CH"
-                candy4.origin?.fullName = "Switzerland"
-
-                try? self.moc.save()
-            }
+            PushButton(title: "Remember Me", isOn: $rememberMe)
+            Text(rememberMe ? "On" : "Off")
         }
+        
     }
 }
 
