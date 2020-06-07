@@ -15,6 +15,7 @@
 		342F0088247F892A00EE1CDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342F0087247F892A00EE1CDE /* Preview Assets.xcassets */; };
 		342F008B247F892A00EE1CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342F0089247F892A00EE1CDE /* LaunchScreen.storyboard */; };
 		346588C8248B534A003B46C5 /* AddViewBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346588C7248B534A003B46C5 /* AddViewBook.swift */; };
+		346A418F248C8BD800EA5426 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A418E248C8BD800EA5426 /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		342F008A247F892A00EE1CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		342F008C247F892A00EE1CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		346588C7248B534A003B46C5 /* AddViewBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewBook.swift; sourceTree = "<group>"; };
+		346A418E248C8BD800EA5426 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				342F007B247F892600EE1CDE /* AppDelegate.swift */,
 				342F007D247F892600EE1CDE /* SceneDelegate.swift */,
 				342F0082247F892600EE1CDE /* ContentView.swift */,
+				346A418E248C8BD800EA5426 /* RatingView.swift */,
 				342F0084247F892A00EE1CDE /* Assets.xcassets */,
 				342F0089247F892A00EE1CDE /* LaunchScreen.storyboard */,
 				342F008C247F892A00EE1CDE /* Info.plist */,
@@ -155,6 +158,7 @@
 				342F007C247F892600EE1CDE /* AppDelegate.swift in Sources */,
 				342F0081247F892600EE1CDE /* Project_11_Bookworm.xcdatamodeld in Sources */,
 				342F0083247F892600EE1CDE /* ContentView.swift in Sources */,
+				346A418F248C8BD800EA5426 /* RatingView.swift in Sources */,
 				342F007E247F892600EE1CDE /* SceneDelegate.swift in Sources */,
 				346588C8248B534A003B46C5 /* AddViewBook.swift in Sources */,
 			);
