@@ -16,6 +16,7 @@
 		342F008B247F892A00EE1CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342F0089247F892A00EE1CDE /* LaunchScreen.storyboard */; };
 		346588C8248B534A003B46C5 /* AddViewBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346588C7248B534A003B46C5 /* AddViewBook.swift */; };
 		346A418F248C8BD800EA5426 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A418E248C8BD800EA5426 /* RatingView.swift */; };
+		346A4191248DCE6900EA5426 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A4190248DCE6900EA5426 /* EmojiRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		342F008C247F892A00EE1CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		346588C7248B534A003B46C5 /* AddViewBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewBook.swift; sourceTree = "<group>"; };
 		346A418E248C8BD800EA5426 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		346A4190248DCE6900EA5426 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				342F008C247F892A00EE1CDE /* Info.plist */,
 				342F007F247F892600EE1CDE /* Project_11_Bookworm.xcdatamodeld */,
 				342F0086247F892A00EE1CDE /* Preview Content */,
+				346A4190248DCE6900EA5426 /* EmojiRatingView.swift */,
 			);
 			path = "Project-11-Bookworm";
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			files = (
 				342F007C247F892600EE1CDE /* AppDelegate.swift in Sources */,
 				342F0081247F892600EE1CDE /* Project_11_Bookworm.xcdatamodeld in Sources */,
+				346A4191248DCE6900EA5426 /* EmojiRatingView.swift in Sources */,
 				342F0083247F892600EE1CDE /* ContentView.swift in Sources */,
 				346A418F248C8BD800EA5426 /* RatingView.swift in Sources */,
 				342F007E247F892600EE1CDE /* SceneDelegate.swift in Sources */,
