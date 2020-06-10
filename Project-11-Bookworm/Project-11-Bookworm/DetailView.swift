@@ -16,6 +16,22 @@ struct DetailView: View {
     
     let book: Book
     
+    static var taskDateFormat: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        return formatter
+    }
+    
+    private var year: String {
+        if let year = book.date {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy"
+            return formatter.string(from: year)
+//            return "\(year)"
+        }
+        return "NO DATE"
+    }
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -31,6 +47,16 @@ struct DetailView: View {
                         .background(Color.black.opacity(0.75))
                         .clipShape(Capsule())
                         .offset(x: -5, y: -5)
+                    
+                    Text(self.year)
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .padding(8)
+                        .foregroundColor(.yellow)
+                        .background(Color.gray.opacity(0.4))
+                        .clipShape(Capsule())
+                        .offset(x: (-geometry.size.width + 75), y: -10)
+                    
                 }
                 
                 Text(self.book.author ?? "Unknown author")
@@ -63,7 +89,7 @@ struct DetailView: View {
     func deleteBook() {
         moc.delete(book)
         
-        // try? moc.save()
+        try? moc.save()
         
         presentationMode.wrappedValue.dismiss()
     }

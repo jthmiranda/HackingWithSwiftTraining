@@ -15,8 +15,9 @@ struct AddViewBook: View {
     @State private var title = ""
     @State private var author = ""
     @State private var rating = 3
-    @State private var genre = ""
+    @State private var genre = "Category"
     @State private var review = ""
+    @State private var date = Date()
     
     let genres = ["Fantasy", "Horrors", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
     
@@ -37,6 +38,7 @@ struct AddViewBook: View {
                 Section {
                     RatingView(rating: $rating)
                     TextField("Write a review", text: $review)
+                    DatePicker("Date of resealse", selection: $date, in: ...Date(), displayedComponents: .date)
                 }
                 
                 Section {
@@ -47,6 +49,7 @@ struct AddViewBook: View {
                         newBook.rating = Int16(self.rating)
                         newBook.genre = self.genre
                         newBook.review = self.review
+                        newBook.date = self.date
                         
                         try? self.moc.save()
                         self.presentationMode.wrappedValue.dismiss()

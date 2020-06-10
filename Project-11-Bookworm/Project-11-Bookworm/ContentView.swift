@@ -29,9 +29,11 @@ struct ContentView: View {
                         VStack(alignment: .leading) {
                             Text(book.title ?? "Unknown title")
                                 .font(.headline)
+                                .foregroundColor(book.rating == 1 ? .red : .none)
                             Text(book.author ?? "Unknown author")
                                 .foregroundColor(.secondary)
                         }
+                        
                     }
                 }
                 .onDelete(perform: deleteBooks)
