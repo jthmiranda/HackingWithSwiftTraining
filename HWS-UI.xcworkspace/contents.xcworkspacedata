@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Project-1-WeSplit/Project-1-WeSplit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Project-1-WeSplit/../Project-2-GuessTheFlag/Project-2-GuessTheFlag.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Project-2-GuessTheFlag/../Project-5-WordScramble/Project-5-WordScramble.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Project-11-Bookworm/Project-11-Bookworm.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Project-12-CoreDataProject/Project-12-CoreDataProject.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Milestone-Project-10-12/Milestone-Project-10-12.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Project-13-Instafilter/Project-13-Instafilter.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Project-14-BucketList/Project-14-BucketList.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Project-15-Accessibility/Project-15-Accessibility.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Project-16-HotProspects/Project-16-HotProspects.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Project-17-Flashzilla/Project-17-Flashzilla.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Project-18-LayoutAndGeometry/Project-18-LayoutAndGeometry.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Project-19-SnowSeeker/Project-19-SnowSeeker.xcodeproj">
+   </FileRef>
+</Workspace>
