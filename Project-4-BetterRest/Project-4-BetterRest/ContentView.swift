@@ -11,9 +11,12 @@ import SwiftUI
 struct ContentView: View {
     @State private var wakeUp = Date()
     
-    
     var body: some View {
-        DatePicker("", selection: $wakeUp, in: Date()..., displayedComponents: .date)
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        let dateString = formatter.string(from: Date())
+        
+        return DatePicker("", selection: $wakeUp, in: Date()..., displayedComponents: .date)
             .labelsHidden()
     }
 }
