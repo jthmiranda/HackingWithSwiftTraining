@@ -17,6 +17,9 @@
       location = "group:Project-2-GuessTheFlag/../Project-5-WordScramble/Project-5-WordScramble.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Project-7-iExpense/Project-7-iExpense.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Project-11-Bookworm/Project-11-Bookworm.xcodeproj">
    </FileRef>
    <FileRef
