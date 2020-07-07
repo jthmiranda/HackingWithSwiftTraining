@@ -38,8 +38,26 @@ struct ContentView: View {
         GridStack(rows: 4, columns: 4) { (row, col) in
             Image(systemName: "\(row * 4 + col).circle")
             Text("R\(row) C\(col)")
+                .customStyle()
         }
             
+    }
+}
+
+struct CustomLargeBlue: ViewModifier {
+    
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundColor(.blue)
+    }
+    
+}
+
+extension Text {
+
+    func customStyle() -> some View {
+        self.modifier(CustomLargeBlue())
     }
 }
 
