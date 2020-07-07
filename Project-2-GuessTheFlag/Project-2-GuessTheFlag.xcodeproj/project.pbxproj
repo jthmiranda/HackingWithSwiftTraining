@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		343FC85424B40E5600210EF7 /* FlagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FC85324B40E5600210EF7 /* FlagImage.swift */; };
 		3471D3D6240454E4001CA77E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471D3D5240454E4001CA77E /* AppDelegate.swift */; };
 		3471D3D8240454E4001CA77E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471D3D7240454E4001CA77E /* SceneDelegate.swift */; };
 		3471D3DA240454E4001CA77E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471D3D9240454E4001CA77E /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		343FC85324B40E5600210EF7 /* FlagImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagImage.swift; sourceTree = "<group>"; };
 		3471D3D2240454E4001CA77E /* Project-2-GuessTheFlag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-2-GuessTheFlag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3471D3D5240454E4001CA77E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3471D3D7240454E4001CA77E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				3471D3D5240454E4001CA77E /* AppDelegate.swift */,
 				3471D3D7240454E4001CA77E /* SceneDelegate.swift */,
 				3471D3D9240454E4001CA77E /* ContentView.swift */,
+				343FC85324B40E5600210EF7 /* FlagImage.swift */,
 				3471D3DB240454E7001CA77E /* Assets.xcassets */,
 				3471D3E0240454E7001CA77E /* LaunchScreen.storyboard */,
 				3471D3E3240454E7001CA77E /* Info.plist */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343FC85424B40E5600210EF7 /* FlagImage.swift in Sources */,
 				3471D3D6240454E4001CA77E /* AppDelegate.swift in Sources */,
 				3471D3D8240454E4001CA77E /* SceneDelegate.swift in Sources */,
 				3471D3DA240454E4001CA77E /* ContentView.swift in Sources */,

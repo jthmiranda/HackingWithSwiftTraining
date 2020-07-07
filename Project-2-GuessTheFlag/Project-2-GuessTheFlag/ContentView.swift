@@ -15,7 +15,7 @@ struct ContentView: View {
     @State private var showingScore =  false
     @State private var scoreTitle = ""
     
-    let labels = [
+    static let labels = [
         "Estonia": "Flag with three horizontal stripes of equal size. Top stripe blue, middle stripe black, bottom stripe white",
         "France": "Flag with three vertical stripes of equal size. Left stripe blue, middle stripe white, right stripe red",
         "Germany": "Flag with three horizontal stripes of equal size. Top stripe black, middle stripe red, bottom stripe gold",
@@ -46,12 +46,7 @@ struct ContentView: View {
                     Button(action: {
                         self.flagTapped(number)
                     }) {
-                        Image(self.countries[number])
-                            .renderingMode(.original)
-                            .clipShape(Capsule())
-                            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
-                            .shadow(color: .black, radius: 2)
-                            .accessibility(label: Text(self.labels[self.countries[number], default: "Unknown flag"]))
+                        FlagImage(country: self.countries[number])
                     }
                 }
                 
