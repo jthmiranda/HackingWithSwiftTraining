@@ -61,11 +61,11 @@
 				34C2CCF724B2D94D00935801 /* AppDelegate.swift */,
 				34C2CCF924B2D94D00935801 /* SceneDelegate.swift */,
 				34C2CCFB24B2D94D00935801 /* ContentView.swift */,
+				34D5CDCC24B94E8C00436033 /* AddView.swift */,
 				34C2CCFD24B2D94E00935801 /* Assets.xcassets */,
 				34C2CD0224B2D94E00935801 /* LaunchScreen.storyboard */,
 				34C2CD0524B2D94E00935801 /* Info.plist */,
 				34C2CCFF24B2D94E00935801 /* Preview Content */,
-				34D5CDCC24B94E8C00436033 /* AddView.swift */,
 			);
 			path = "Project-7-iExpense";
 			sourceTree = "<group>";

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ExperseItem: Identifiable {
+struct ExperseItem: Identifiable, Codable {
     let id = UUID()
     let name: String
     let type: String
@@ -16,7 +16,28 @@ struct ExperseItem: Identifiable {
 }
 
 class Expenses: ObservableObject {
-    @Published var items = [ExperseItem]()
+    @Published var items = [ExperseItem]() {
+        didSet {
+            let encoder = JSONEncoder()
+            
+            if let data = try? encoder.encode(items) {
+                UserDefaults.standard.set(data, forKey: "iExpenses")
+            }
+        }
+    }
+    
+    init() {
+        if let items = UserDefaults.standard.data(forKey: "iExpenses") {
+            let decoder = JSONDecoder()
+            
+            if let data = try? decoder.decode([ExperseItem].self, from: items) {
+                self.items = data
+                return
+            }
+        }
+        
+        self.items = []
+    }
 }
 
 struct ContentView: View {
@@ -34,7 +55,7 @@ struct ContentView: View {
             .navigationBarTitle("iExpenses")
             .navigationBarItems(leading: EditButton(),trailing:
                 Button(action: {
-                    self.showingAddExpense.toggle()
+                    self.showingAddExpense = true
                 }) {
                     Image(systemName: "plus")
                 }

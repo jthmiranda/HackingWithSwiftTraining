@@ -23,13 +23,21 @@ struct AddView: View {
                 
                 Picker("Types", selection: $type) {
                     ForEach(Self.types, id: \.self) {
-                        Text("\($0)")
+                        Text($0)
                     }
                 }
                 
                 TextField("Amount", text: $amount)
             }
-        .navigationBarTitle("Add new expense")
+            .navigationBarTitle("Add new expense")
+            .navigationBarItems(trailing:
+                Button("Save") {
+                    if let actualAmount = Int(self.amount) {
+                        let item = ExperseItem(name: self.name, type: self.type, amount: actualAmount)
+                        self.expenses.items.append(item)
+                    }
+                }
+            )
         }
     }
 }
