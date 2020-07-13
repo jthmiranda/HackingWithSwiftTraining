@@ -10,31 +10,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ScrollView(.vertical) {
-            VStack(spacing: 10.0) {
-                ForEach(1..<100) {
-                    CustomText("Item \($0)")
-                        .font(.title)
+        NavigationView {
+            List(0..<100) { row in
+                NavigationLink(destination: Text("Detail \(row)")) {
+                    Text("Row \(row)")
                 }
             }
-            .frame(maxWidth: .infinity)
-
+            .navigationBarTitle("SwiftUI")
         }
     }
 }
 
-struct CustomText: View {
-    var text: String
-    
-    var body: some View {
-        Text(text)
-    }
-    
-    init(_ text: String) {
-        print("Creating a new custom text")
-        self.text = text
-    }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
