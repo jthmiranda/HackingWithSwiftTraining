@@ -9,35 +9,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    let astronauts = Bundle.main.decode("astronauts.json")
+    
     var body: some View {
-        Button("Decode Json") {
-            let json = """
-            {
-                "name": "Taylor Swift",
-                "address": {
-                    "street": "555, Taylor Swift Ave",
-                    "city": "Nashvile"
-                }
-            }
-            """
-            
-            struct User: Codable {
-                let name: String
-                let address: Address
-            }
-            
-            struct Address: Codable {
-                let street: String
-                let city: String
-            }
-            
-            let data = Data(json.utf8)
-            let decoder = JSONDecoder()
-            
-            if let add = try? decoder.decode(User.self, from: data) {
-                print(add.address.street)
-            }
-        }
+        Text("\(astronauts.count)")
+        
     }
 }
 
