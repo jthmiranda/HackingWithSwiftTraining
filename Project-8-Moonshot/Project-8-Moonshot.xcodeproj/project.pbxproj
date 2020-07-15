@@ -18,6 +18,7 @@
 		34FC6FE524BD1399000A6428 /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC6FE424BD1399000A6428 /* Astronaut.swift */; };
 		34FC6FE724BD13F6000A6428 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC6FE624BD13F6000A6428 /* Bundle-Decodable.swift */; };
 		34FC6FE924BD4D6E000A6428 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC6FE824BD4D6E000A6428 /* Mission.swift */; };
+		34FD21B124BEB6EA0034F79C /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FD21B024BEB6EA0034F79C /* MissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		34FC6FE424BD1399000A6428 /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
 		34FC6FE624BD13F6000A6428 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		34FC6FE824BD4D6E000A6428 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		34FD21B024BEB6EA0034F79C /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				349A558B24BA2FAB003A8A4D /* Assets.xcassets */,
 				34FC6FE124BD12E1000A6428 /* astronauts.json */,
 				34FC6FE024BD12E1000A6428 /* missions.json */,
+				34FD21B024BEB6EA0034F79C /* MissionView.swift */,
 				34FC6FE624BD13F6000A6428 /* Bundle-Decodable.swift */,
 				34FC6FE424BD1399000A6428 /* Astronaut.swift */,
 				34FC6FE824BD4D6E000A6428 /* Mission.swift */,
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34FD21B124BEB6EA0034F79C /* MissionView.swift in Sources */,
 				34FC6FE924BD4D6E000A6428 /* Mission.swift in Sources */,
 				349A558624BA2FA6003A8A4D /* AppDelegate.swift in Sources */,
 				349A558824BA2FA6003A8A4D /* SceneDelegate.swift in Sources */,
