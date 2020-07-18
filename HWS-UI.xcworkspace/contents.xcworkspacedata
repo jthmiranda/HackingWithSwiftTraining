@@ -23,6 +23,9 @@
       location = "group:Project-8-Moonshot/Project-8-Moonshot.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Project-9-Drawing/Project-9-Drawing.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Project-11-Bookworm/Project-11-Bookworm.xcodeproj">
    </FileRef>
    <FileRef
