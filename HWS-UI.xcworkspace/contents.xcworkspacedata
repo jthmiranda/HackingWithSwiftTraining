@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Project-6-Animation/Project-6-Animation.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Project-1-WeSplit/Project-1-WeSplit.xcodeproj">
    </FileRef>
    <FileRef
@@ -18,6 +15,9 @@
    </FileRef>
    <FileRef
       location = "group:Project-2-GuessTheFlag/../Project-5-WordScramble/Project-5-WordScramble.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Project-6-Animation/Project-6-Animation.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Project-7-iExpense/Project-7-iExpense.xcodeproj">
