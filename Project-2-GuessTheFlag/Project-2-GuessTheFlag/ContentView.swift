@@ -29,6 +29,9 @@ struct ContentView: View {
         "US": "Flag with red and white stripes of equal size, with white stars on a blue background in the top-left corner"
     ]
     
+    @State var selected: Int?
+    @State var animationAmount: Double = 0.0
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
@@ -44,10 +47,17 @@ struct ContentView: View {
                 
                 ForEach(0..<3) { number in
                     Button(action: {
+                        
                         self.flagTapped(number)
+                        self.selected = number
+                        withAnimation {
+                            self.animationAmount += 360
+                        }
                     }) {
                         FlagImage(country: self.countries[number])
                     }
+                    .rotation3DEffect(.degrees(self.selected == number ? self.animationAmount : 0.0), axis: (x: 0, y: 1, z: 0))
+                    
                 }
                 
                 Spacer()
