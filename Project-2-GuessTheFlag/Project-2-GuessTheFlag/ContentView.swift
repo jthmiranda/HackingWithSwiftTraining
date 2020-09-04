@@ -47,12 +47,7 @@ struct ContentView: View {
                 
                 ForEach(0..<3) { number in
                     Button(action: {
-                        
                         self.flagTapped(number)
-                        self.selected = number
-                        withAnimation {
-                            self.animationAmount += 360
-                        }
                     }) {
                         FlagImage(country: self.countries[number])
                     }
@@ -71,11 +66,19 @@ struct ContentView: View {
     func flagTapped(_ number: Int) {
         if number == correctAnswer {
             scoreTitle = "Correct"
+            self.selected = number
+            withAnimation {
+                self.animationAmount += 360
+            }
         } else {
             scoreTitle = "Wrong"
+            self.selected = nil
+            self.animationAmount = 0
         }
         
         showingScore = true
+        
+        askQuestion()
     }
     
     func askQuestion() {
