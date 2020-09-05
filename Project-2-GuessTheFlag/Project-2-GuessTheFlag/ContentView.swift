@@ -31,6 +31,8 @@ struct ContentView: View {
     
     @State var selected: Int?
     @State var animationAmount: Double = 0.0
+    @State var opacityOther: Double = 1.0
+    
     
     var body: some View {
         ZStack {
@@ -52,6 +54,8 @@ struct ContentView: View {
                         FlagImage(country: self.countries[number])
                     }
                     .rotation3DEffect(.degrees(self.selected == number ? self.animationAmount : 0.0), axis: (x: 0, y: 1, z: 0))
+                    .opacity(self.opacityOther)
+                
                     
                 }
                 
@@ -70,10 +74,13 @@ struct ContentView: View {
             withAnimation {
                 self.animationAmount += 360
             }
+            self.opacityOther = 0.2
+            selected = nil
         } else {
             scoreTitle = "Wrong"
             self.selected = nil
             self.animationAmount = 0
+            self.opacityOther = 1
         }
         
         showingScore = true
