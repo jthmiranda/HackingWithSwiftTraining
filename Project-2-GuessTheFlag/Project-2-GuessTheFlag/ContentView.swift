@@ -71,7 +71,7 @@ struct ContentView: View {
         if number == correctAnswer {
             scoreTitle = "Correct"
             self.selected = number
-            withAnimation {
+            withAnimation(.linear(duration: 1)) {
                 self.animationAmount += 360
             }
             self.opacityOther = 0.2
